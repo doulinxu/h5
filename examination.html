@@ -4,23 +4,127 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>试卷页</title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/examination.css"/>
 	</head>
 	<body>
-		<div class="swiper-container">
-		    <div class="swiper-wrapper">
-		        <div class="swiper-slide">判断题</div>
-		        <div class="swiper-slide">选择题</div>
-		        <div class="swiper-slide">填空题</div>
-		    </div>
+		<div class="container">
+			<div class="title">
+				<span class="goback">
+					
+				</span>
+				<span class="countdown">
+					倒计时：<i>1:32:20</i>
+				</span>
+				<div class="head">
+					<span class="vip active"></span>
+				</div>
+			</div>
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+			        	<div class="main-card">
+			        		<div class="examination">
+			        			<div class="exam-title">
+			        				<div class="exam-type">判断题</div>
+			        				<div class="exam-progress">
+			        					<span></span>
+			        					20<i>/30</i>
+			        				</div>
+			        			</div>
+			        			<div class="exam-content">
+			        				<p>1 从价值形态上看，资本又是由一定数量的生产资料价值和劳动力价值构成，由一定数量的不变资本和可变资本构成，它们的比例叫做资本的价值构成。</p>
+			        				<p>A&nbsp;&nbsp;&nbsp;正确</p>
+			        				<p>B&nbsp;&nbsp;&nbsp;错误</p>
+			        			</div>
+			        			<div class="options-box">
+			        				<div class="option">
+			        					A <span></span>
+			        				</div>
+			        				<div class="option">
+			        					B <span></span>
+			        				</div>
+			        			</div>
+			        			<button class="confirm_btn">确认</button>
+			        		</div>
+			        	</div>
+			        </div>
+			        <div class="swiper-slide">
+			        	<div class="main-card">
+			        		<div class="examination">
+			        			<div class="exam-title">
+			        				<div class="exam-type">判断题</div>
+			        				<div class="exam-progress">
+			        					<span></span>
+			        					20<i>/30</i>
+			        				</div>
+			        			</div>
+			        			<div class="exam-content">
+			        				<p>1 从价值形态上看，资本又是由一定数量的生产资料价值和劳动力价值构成，由一定数量的不变资本和可变资本构成，它们的比例叫做资本的价值构成。</p>
+			        				<p>A&nbsp;&nbsp;&nbsp;正确</p>
+			        				<p>B&nbsp;&nbsp;&nbsp;错误</p>
+			        			</div>
+			        			<div class="options-box">
+			        				<div class="option">
+			        					A <span></span>
+			        				</div>
+			        				<div class="option">
+			        					B <span></span>
+			        				</div>
+			        			</div>
+			        			<button class="confirm_btn">确认</button>
+			        		</div>
+			        	</div>
+			        </div>
+			        <div class="swiper-slide">
+			        	<div class="main-card">
+			        		<div class="examination">
+			        			<div class="exam-title">
+			        				<div class="exam-type">判断题</div>
+			        				<div class="exam-progress">
+			        					<span></span>
+			        					20<i>/30</i>
+			        				</div>
+			        			</div>
+			        			<div class="exam-content">
+			        				<p>1 从价值形态上看，资本又是由一定数量的生产资料价值和劳动力价值构成，由一定数量的不变资本和可变资本构成，它们的比例叫做资本的价值构成。</p>
+			        				<p>A&nbsp;&nbsp;&nbsp;正确</p>
+			        				<p>B&nbsp;&nbsp;&nbsp;错误</p>
+			        			</div>
+			        			<div class="options-box">
+			        				<div class="option">
+			        					A <span></span>
+			        				</div>
+			        				<div class="option">
+			        					B <span></span>
+			        				</div>
+			        			</div>
+			        			<button class="confirm_btn">确认</button>
+			        		</div>
+			        	</div>
+			        </div>
+			    </div>
+			</div>
+			<div class="footer">
+				
+			</div>
 		</div>
+		
+		
 	</body>
 	<script type="text/javascript">
+//		初始化滑动组块
 		 var mySwiper = new Swiper ('.swiper-container', {
-		    direction: 'horizontal', // 垂直切换选项
+		    direction: 'horizontal', // 水平切换选项
 		    loop: false, // 循环模式选项
-		  })  
+		  });  
+		 $('.option').click(function(){
+		 	$(this).parent().find('.selected').removeClass('selected');
+		 	$(this).addClass('selected');
+		 });
 	</script>
 </html>

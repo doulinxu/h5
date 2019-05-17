@@ -2,3 +2,139 @@
   width: 100%;
   height: 300px;
 }
+.container .title {
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  position: relative;
+  background: #fafafa;
+  height: 44px;
+  line-height: 44px;
+  color: #404040;
+}
+.container .title .goback {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url(img/goback_blue.png) no-repeat 0 0;
+  background-size: 100%;
+  left: 20px;
+  top: 12px;
+}
+.container .title .countdown {
+  color: #3298ff;
+}
+.container .title .head {
+  width: 28px;
+  height: 28px;
+  float: right;
+  background: url(img/head_examination.png) no-repeat center;
+  background-size: 100%;
+  margin-top: 6px;
+  margin-right: 20px;
+  position: relative;
+}
+.container .title .head .vip {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: url(img/VIP.png) no-repeat center #c7c8c8;
+  background-size: 9px 4px;
+  left: 50%;
+  margin-left: -6.5px;
+  bottom: -6px;
+}
+.container .title .head .active {
+  background-color: #3298ff;
+}
+.container .title i {
+  font-style: normal;
+}
+.container .swiper-container {
+  color: #4b4a4a;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card {
+  width: 95%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 4px rgba(0, 21, 41, 0.15);
+  margin-top: 10px;
+  border-radius: 4px;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination {
+  padding-bottom: 15px;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-title {
+  height: 40px;
+  line-height: 40px;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-title .exam-type {
+  width: 46px;
+  height: 25px;
+  float: left;
+  margin-left: 15px;
+  background: url(img/exam_title_type.png) no-repeat center;
+  background-size: 100%;
+  color: #fff;
+  line-height: 25px;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 12px;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-title .exam-progress {
+  float: right;
+  margin-right: 15px;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-title .exam-progress span {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  position: relative;
+  top: 3px;
+  margin-right: 3px;
+  background: url(img/exam_title_progress.png) no-repeat center;
+  background-size: 100%;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-title .exam-progress i {
+  color: #bdbdbd;
+  font-style: normal;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-content {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-content > p {
+  margin-bottom: 20px;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .options-box {
+  width: 80%;
+  margin: 0 auto;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .options-box .option.selected span {
+  background: url(img/exam_option_success.png) no-repeat center;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .options-box .option {
+  display: inline-block;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .options-box .option span {
+  width: 19px;
+  height: 19px;
+  background: url(img/exam_option.png) no-repeat center;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin-right: 25px;
+  margin-left: 5px;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .confirm_btn {
+  width: 80px;
+  height: 30px;
+  color: #fff;
+  margin: 0 auto;
+  display: block;
+  border-radius: 4px;
+  border: 0;
+  background-color: #bdbdbd;
+  margin-top: 20px;
+}
