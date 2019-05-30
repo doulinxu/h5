@@ -1,0 +1,151 @@
+html,
+body {
+  width: 100%;
+  overflow: auto;
+}
+.guide_submit {
+  width: 187px;
+  height: 47px;
+  line-height: 47px;
+  background: url(img/btn_bg.png) no-repeat center;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container .content {
+  width: 100%;
+  height: auto;
+  min-height: calc(100vh - 100px);
+  background-size: 100%;
+  overflow: hidden;
+}
+.container .content .title {
+  text-align: center;
+  font-size: 12px;
+  background: #3195fa;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  position: relative;
+}
+.container .content .title .text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+}
+.container .content .title .tologin {
+  float: right;
+  margin-right: 10px;
+}
+.container .content .title .hesd_pic {
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px #5aacff;
+  background: url(img/head.png) no-repeat center #dadada;
+  background-size: 100%;
+  margin-top: 4px;
+  margin-right: 10px;
+  position: relative;
+}
+.container .content .title .hesd_pic .vip {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: url(img/VIP.png) no-repeat center #c7c8c8;
+  background-size: 7px 3px;
+  left: 50%;
+  margin-left: -7.5px;
+  bottom: -5px;
+}
+.container .content .title .goback {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url(img/goback.png) no-repeat 0 0;
+  background-size: 100%;
+  left: 20px;
+  top: 10px;
+}
+.container .content .maincard {
+  width: 85%;
+  margin: 0 auto;
+}
+.container .content .maincard .menu-list {
+  width: 100%;
+}
+.container .content .maincard .menu-list .menu-item {
+  width: 100%;
+}
+.container .content .maincard .menu-list .menu-item .menu-item-title {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #dadada;
+}
+.container .content .maincard .menu-list .menu-item .menu-item-title .tip {
+  float: left;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: #3195fa;
+  text-align: center;
+  line-height: 37px;
+  color: #fff;
+  margin-top: 8px;
+  margin-right: 15px;
+}
+.container .content .maincard .menu-list .menu-item .menu-item-title .text {
+  color: #4b4a4a;
+  float: left;
+}
+.container .content .maincard .menu-list .menu-item .menu-item-title .toggle {
+  float: right;
+  color: #999999;
+}
+.container .content .maincard .menu-list .menu-item .menu-item-title .toggle img {
+  position: relative;
+  top: -2px;
+}
+.container .content .maincard .menu-list .menu-item .menu-item-title .toggle .open {
+  transform: rotate(180deg);
+}
+.container .content .maincard .menu-list .menu-item .menu-item-content.selected li {
+  display: none;
+}
+.container .content .maincard .menu-list .menu-item .menu-item-content.selected p {
+  display: none;
+}
+.container .content .maincard .menu-list .menu-item .menu-item-content {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: none;
+  border-bottom: 1px solid #dadada;
+}
+.container .content .maincard .menu-list .menu-item .menu-item-content p {
+  width: 100%;
+  color: #999999;
+}
+.container .content .maincard .menu-list .menu-item .menu-item-content li {
+  padding: 9px 11px;
+  color: #3195fa;
+  display: inline-block;
+  border: 1px solid #3195fa;
+  margin: 10px;
+  border-radius: 4px ;
+}
+.container .content .maincard .menu-list .menu-item .menu-item-content li.selected {
+  display: inline-block !important;
+  color: #fff !important;
+  background: #3195FA;
+}

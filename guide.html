@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>作文培训-引导页</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/guide.css"/>
+		<link rel="stylesheet" type="text/css" href="css/validate.css"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<div class="title">
+					<span class="goback"></span>
+					<span class="text">聚培训作文</span>
+					<!--<span class="tologin">登录</span>-->
+					<div class="hesd_pic">
+							<span class="vip"></span>
+					</div>
+				</div>
+				<div class="maincard">
+					<ul class="menu-list">
+						<li class="menu-item">
+							<div class="menu-item-title">
+								<span class="tip">step 1</span>
+								<span class="text">选择知识点</span>
+								<div class="toggle">
+									<span>展开</span>
+									<img src="css/img/toggle_close.png" alt="" />
+								</div>
+							</div>
+							<ul class="menu-item-content">
+								<li>模拟考试</li>
+								<li>单元考试</li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<div class="menu-item-title">
+								<span class="tip">step 2</span>
+								<span class="text">选择状态</span>
+								<div class="toggle">
+									<span>展开</span>
+									<img src="css/img/toggle_close.png" alt="" />
+								</div>
+							</div>
+							<ul class="menu-item-content">
+								<li>收费试卷</li>
+								<li>免费试卷</li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<div class="menu-item-title">
+								<span class="tip">step 3</span>
+								<span class="text">选择年级</span>
+								<div class="toggle">
+									<span>展开</span>
+									<img src="css/img/toggle_close.png" alt="" />
+								</div>
+							</div>
+							<ul class="menu-item-content">
+								<p>小学</p>
+								<li>一年级</li>
+								<li>二年级</li>
+								<li>三年级</li>
+								<li>四年级</li>
+								<li>五年级</li>
+								<li>六年级</li>
+								<p>初中</p>
+								<li>初一</li>
+								<li>初二</li>
+								<li>初三</li>
+								<p>高中</p>
+								<li>高一</li>
+								<li>高二</li>
+								<li>高三</li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<div class="menu-item-title">
+								<span class="tip">step 4</span>
+								<span class="text">选择知识点</span>
+								<div class="toggle">
+									<span>展开</span>
+									<img src="css/img/toggle_close.png" alt="" />
+								</div>
+							</div>
+							<ul class="menu-item-content">
+								<li>模拟考试</li>
+								<li>单元考试</li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<div class="menu-item-title">
+								<span class="tip">step 5</span>
+								<span class="text">选择科目</span>
+								<div class="toggle">
+									<span>展开</span>
+									<img src="css/img/toggle_close.png" alt="" />
+								</div>
+							</div>
+							<ul class="menu-item-content">
+								<li>语文</li>
+								<li>数学</li>
+								<li>英语</li>
+								<li>化学</li>
+								<li>物理</li>
+								<li>生物</li>
+								<li>政治</li>
+								<li>历史</li>
+								<li>地理</li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<div class="menu-item-title">
+								<span class="tip">step 6</span>
+								<span class="text">选择版本</span>
+								<div class="toggle">
+									<span>展开</span>
+									<img src="css/img/toggle_close.png" alt="" />
+								</div>
+							</div>
+							<ul class="menu-item-content">
+								<li>人教版</li>
+								<li>苏教版</li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<div class="menu-item-title">
+								<span class="tip">step 7</span>
+								<span class="text">选择学期</span>
+								<div class="toggle">
+									<span>展开</span>
+									<img src="css/img/toggle_close.png" alt="" />
+								</div>
+							</div>
+							<ul class="menu-item-content">
+								<li>上学期</li>
+								<li>下学期</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			<div class="guide_submit">
+					确定
+				</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//展开收起菜单
+		$('.menu-item-title .toggle').on('click',function(){
+			var $contentBox = $(this).parents('.menu-item').find('.menu-item-content');
+			$contentBox.toggle();
+			if($(this).find('span').html() === '展开'){
+				$(this).find('span').html('收起');
+				$(this).find('img').attr('class','open');
+			}else{
+				$(this).find('span').html('展开');
+				$(this).find('img').attr('class','');
+			}
+		});
+		//选中选项功能
+		$('.menu-item-content li').on('click',function(){
+			if($(this).hasClass('selected')){
+				$(this).removeClass('selected');
+				$(this).parent().removeClass('selected');
+			}else{
+				$(this).addClass('selected');
+				$(this).parent().addClass('selected');
+			}
+		});
+//		提交
+//提示语控件 可以提出去的
+		var fieldTooltip=(function(){
+			var instance=null;
+				function show(text){
+					if(!instance){
+						var $container=$('<div class="field-tooltipWrap"><div class="field-tooltipInner"><div class="field-tooltip fieldTipBounceIn"><div class="zvalid-resultformat">'+text+'</div></div></div></div>');
+		    			$container.appendTo($("body"));
+		    			instance=true;
+		    			setTimeout(function(){
+							$container.remove();
+							instance=false;
+						},1500)
+					}
+				}
+			return {
+				show:show
+			}
+		})();
+//		以下做校验,如有必要就放开
+//		$('.guide_submit').on('click',function(){
+//			$('.menu-item-content').each(function(){
+//				if($(this).find('.selected').length === 0){
+//					console.log($(this).parents('.menu-item').find('.menu-item-title .text'));
+//					fieldTooltip.show('请'+ $(this).parents('.menu-item').find('.menu-item-title .text').html());
+//					return false;
+//				}
+//			});
+//
+//		});
+	</script>
+</html>

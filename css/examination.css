@@ -1,16 +1,30 @@
 .swiper-container {
   width: 100%;
-  height: 300px;
+  height: auto;
+}
+html,
+body {
+  height: 100%;
+  overflow-y: hidden ;
+}
+.container .swiper-slide {
+  max-height: calc(100vh - 44px);
+  overflow: auto;
+  padding-bottom: 20px;
 }
 .container .title {
   text-align: center;
   font-size: 12px;
   color: #fff;
   position: relative;
+  left: 0;
+  top: 0;
   background: #fafafa;
   height: 44px;
   line-height: 44px;
   color: #404040;
+  width: 100%;
+  z-index: 10000;
 }
 .container .title .goback {
   position: absolute;
@@ -60,6 +74,7 @@
   box-shadow: 0px 0px 4px rgba(0, 21, 41, 0.15);
   margin-top: 10px;
   border-radius: 4px;
+  margin-bottom: 5px;
 }
 .container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination {
   padding-bottom: 15px;
@@ -99,16 +114,42 @@
   color: #bdbdbd;
   font-style: normal;
 }
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .read .options-box .option {
+  margin-bottom: 20px;
+}
 .container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-content {
   width: 80%;
   margin: 0 auto;
   margin-top: 10px;
 }
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-content .read_part {
+  margin-bottom: 10px;
+}
 .container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-content > p {
   margin-bottom: 20px;
 }
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-content > p span {
+  margin-right: 5px;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-content .fill {
+  display: inline-block;
+  width: 60px;
+  border-bottom: 1px solid #1187ff;
+  margin-left: 5px;
+  height: 30px;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-content input {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .exam-content .noAnswer {
+  background: url(img/noAnswer.png) no-repeat center;
+  background-size: 20px 20px;
+}
 .container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .options-box {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 .container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .options-box .option.selected span {
@@ -137,4 +178,7 @@
   border: 0;
   background-color: #bdbdbd;
   margin-top: 20px;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide .main-card .examination .active {
+  background: #3298ff;
 }
