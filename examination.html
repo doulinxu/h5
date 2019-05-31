@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
 		<title>试卷页</title>
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
@@ -14,11 +15,9 @@
 	<body>
 		<div class="container">
 			<div class="title">
-				<span class="goback">
-					
-				</span>
+				<span class="goback"></span>
 				<span class="countdown">
-					倒计时：<i>1:32:20</i>
+					倒计时：<i></i>
 				</span>
 				<div class="head">
 					<span class="vip active"></span>
@@ -26,7 +25,7 @@
 			</div>
 			<div class="swiper-container">
 			    <div class="swiper-wrapper">
-			        <div class="swiper-slide">
+			        <div class="swiper-slide"  data-number = "1">
 			        	<div class="main-card">
 			        		<div class="examination">
 			        			<div class="exam-title">
@@ -50,17 +49,106 @@
 				        			</div>
 			        			</div>
 			        			<button class="confirm_btn">确认</button>
+			        			
 			        		</div>
+			        	
 			        	</div>
 			        </div>
-			        <div class="swiper-slide">
+			         <div class="swiper-slide" data-number = "2">
+			        	<div class="main-card">
+			        		<div class="examination">
+			        			<div class="exam-title">
+			        				<div class="exam-type">判断题</div>
+			        				<div class="exam-progress">
+			        					<span></span>
+			        					2<i>/30</i>
+			        				</div>
+			        			</div>
+			        			<div class="exam-content">
+			        				<p>1 从价值形态上看，资本又是由一定数量的生产资料价值和劳动力价值构成，由一定数量的不变资本和可变资本构成，它们的比例叫做资本的价值构成。</p>
+			        				<p><span>A</span>正确</p>
+			        				<p><span>B</span>错误</p>
+			        				<div class="options-box">
+				        				<div class="option">
+				        					A <span></span>
+				        				</div>
+				        				<div class="option">
+				        					B <span></span>
+				        				</div>
+				        			</div>
+			        			</div>
+			        			<button class="confirm_btn">确认</button>
+			        			
+			        		</div>
+			        	
+			        	</div>
+			        </div>
+			         <div class="swiper-slide" data-number = "3">
+			        	<div class="main-card">
+			        		<div class="examination">
+			        			<div class="exam-title">
+			        				<div class="exam-type">判断题</div>
+			        				<div class="exam-progress">
+			        					<span></span>
+			        					3<i>/30</i>
+			        				</div>
+			        			</div>
+			        			<div class="exam-content">
+			        				<p>1 从价值形态上看，资本又是由一定数量的生产资料价值和劳动力价值构成，由一定数量的不变资本和可变资本构成，它们的比例叫做资本的价值构成。</p>
+			        				<p><span>A</span>正确</p>
+			        				<p><span>B</span>错误</p>
+			        				<div class="options-box">
+				        				<div class="option">
+				        					A <span></span>
+				        				</div>
+				        				<div class="option">
+				        					B <span></span>
+				        				</div>
+				        			</div>
+			        			</div>
+			        			<button class="confirm_btn">确认</button>
+			        			
+			        		</div>
+			        	
+			        	</div>
+			        </div>
+			         <div class="swiper-slide" data-number = "4">
+			        	<div class="main-card">
+			        		<div class="examination">
+			        			<div class="exam-title">
+			        				<div class="exam-type">判断题</div>
+			        				<div class="exam-progress">
+			        					<span></span>
+			        					4<i>/30</i>
+			        				</div>
+			        			</div>
+			        			<div class="exam-content">
+			        				<p>1 从价值形态上看，资本又是由一定数量的生产资料价值和劳动力价值构成，由一定数量的不变资本和可变资本构成，它们的比例叫做资本的价值构成。</p>
+			        				<p><span>A</span>正确</p>
+			        				<p><span>B</span>错误</p>
+			        				<div class="options-box">
+				        				<div class="option">
+				        					A <span></span>
+				        				</div>
+				        				<div class="option">
+				        					B <span></span>
+				        				</div>
+				        			</div>
+			        			</div>
+			        			<button class="confirm_btn">确认</button>
+			        			
+			        		</div>
+			        	
+			        	</div>
+			        </div>
+			         <div class="swiper-slide" data-number = "5">
 			        	<div class="main-card">
 			        		<div class="examination">
 			        			<div class="exam-title">
 			        				<div class="exam-type">选择题</div>
 			        				<div class="exam-progress">
 			        					<span></span>
-			        					2<i>/30</i>
+			        					5<i>/30</i>
 			        				</div>
 			        			</div>
 			        			<div class="exam-content">
@@ -86,16 +174,17 @@
 			        			</div>
 			        			<button class="confirm_btn">确认</button>
 			        		</div>
+			        		
 			        	</div>
 			        </div>
-			        <div class="swiper-slide">
+			         <div class="swiper-slide" data-number = "6">
 			        	<div class="main-card">
 			        		<div class="examination">
 			        			<div class="exam-title">
 			        				<div class="exam-type">阅读题</div>
 			        				<div class="exam-progress">
 			        					<span></span>
-			        					3<i>/30</i>
+			        					6<i>/30</i>
 			        				</div>
 			        			</div>
 			        			<div class="exam-content read">
@@ -129,48 +218,33 @@
 			        	</div>
 			        </div>
 			    </div>
-			</div>
+
 			<div class="footer">
+				<input type="text" placeholder="我要评论....." />
+				<span class="ahead">交卷</span>
+				<span class="comment">192</span>
+			</div>
+		</div>
+		<div class="nav">
+			<p class="msk"></p>
+			<div class="nav-content">
+				<p class="nav-title">试卷导航</p>
+				<div class="exam-type">
+					<p class="exam-type-title">
+						一、单项选择题
+						<span>每题3分 共90分</span>
+					</p>
+					<ul class="title-number">
+						<li class="noAnswer" data-number = "1">1</li>
+						<li class="noAnswer " data-number = "2">2</li>
+						<li class="noAnswer" data-number = "3">3</li>
+						<li class="noAnswer" data-number = "4">4</li>
+					</ul>
+				</div>
 				
 			</div>
 		</div>
 		
-		
 	</body>
-	<script type="text/javascript">
-//		初始化滑动组块
-		 var mySwiper = new Swiper ('.swiper-container', {
-		    direction: 'horizontal', // 水平切换选项
-		    loop: false, // 循环模式选项
-		  });  
-		  //选择题答题逻辑
-		 $('.option').click(function(){
-		 	if($(this).hasClass('selected')){
-		 		$(this).removeClass('selected');
-		 		$(this).parents('.examination').find('.confirm_btn').removeClass('active');
-		 	}else{
-		 		$(this).parent().find('.selected').removeClass('selected');
-		 		$(this).addClass('selected');
-		 		$(this).parents('.examination').find('.confirm_btn').addClass('active');
-		 	}
-		 });
-		 $('.confirm_btn').on('click',function(){
-		 	if($(this).hasClass('active')){
-		 		mySwiper.slideNext();
-		 	}else{
-		 		return;
-		 	}
-		 });
-		 $('.fill').on('click',function(){
-		 	if($(this).hasClass('noAnswer')){//无答案时
-		 		console.log($(this).find('input'));
-		 		$(this).find('input').show().focus();
-		 	}
-		 });
-		 $('.fill').find('input').on('blur',function(){
-		 	if($(this).val() === ''){
-		 		$(this).hide();
-		 	}
-		 });
-	</script>
+	<script src="js/examination.js" type="text/javascript" charset="utf-8"></script>
 </html>
