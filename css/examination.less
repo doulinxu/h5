@@ -175,7 +175,7 @@ user-select: none;
                           }
                           .noAnswer{
                               background: url(img/noAnswer.png) no-repeat center;
-                              background-size:20px 20px;;
+                              background-size:20px 20px;
                           }
                       }
                       .options-box{
@@ -225,7 +225,36 @@ user-select: none;
                       .active{
                           background: #3298ff;
                       }
-          
+                       .write_detail{
+                           p{
+                               font-weight: 600;
+                               line-height: 24px;
+                           }
+                           input{
+                               width: 100%;
+                               height:36px;
+                               text-indent: 15px;
+                               border-radius: 4px;
+                               background: #ececec;
+                               border: 0;
+                               display: block;
+                               margin-bottom: 10px;
+                               margin-top: 10px;
+                               
+                           }
+                           textarea{
+                                width: 100%;
+                               height:220px;
+                               text-indent: 15px;
+                               border-radius: 4px;
+                               background: #ececec;
+                               border: 0;
+                           }
+                       }
+                       .confirm_btn.write{
+                           width:70%;
+                           border-radius:20px;
+                       }
                   }
                   .answer{
                       width:95%;
@@ -239,25 +268,42 @@ user-select: none;
                           margin: 0 auto;
                           line-height: 34px;
                       }
-                      .answer_title{
-                          font-size: 16px;
-                      }
-                      .answer_detail{
+                       .resolution_vip{
+                              display: inline-block;
+                              padding:0 5px;
+                              font-size: 12px;
+                              border-radius: 20px;
+                              background: #d2e8ff;
+                              color:#3298ff;
+                          }
                           .toAsk{
                               float: right;
                               padding-left: 24px;
                               background: url(img/toAsk.png) no-repeat left center;
                               background-size:20px ;
                           }
+                      .answer_title{
+                          font-size: 16px;
+                      }
+                      .answer_detail{
+                          
+                         
                       }
                       .resolution{
-                          .resolution_vip{
+                         
+                      }
+                  }
+                  .no-comment{
+                      p{
+                          width: 100%;
+                          text-align: center;
+                          span{
                               display: inline-block;
-                              padding:0 10px;
-                              font-size: 12px;
-                              border-radius: 20px;
-                              background: #d2e8ff;
-                              color:#3298ff;
+                              margin-left: 10px;
+                              width: 20px;
+                              height: 20px;
+                              background: url(img/noAnswer.png) no-repeat center;
+                              background-size:20px 20px;
                           }
                       }
                   }
@@ -472,6 +518,7 @@ user-select: none;
                 border-radius: 50%;
                 display: inline-block;
                 margin: 0 10px;
+                margin-top:10px;
             }
             .answered{
                 background: #d2e8ff;
@@ -617,5 +664,79 @@ user-select: none;
             background: #3298ff;
             margin-top:15px;
         }
+    }
+}
+.submit_examination{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height:100%;
+    top: 0;
+    z-index: 100;
+    
+    .msk{
+        width:100%;
+        height:100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background:#000;
+        opacity: 0.55;
+    }
+    .submit_examination_content{
+        width:280px;
+
+        height:280px;
+        border-radius: 4px;
+        position: absolute;
+        left:50%;
+        margin-left: -140px;
+        margin-top:120px;
+        padding-top:160px;
+        background:url(img/submit_bg.png) no-repeat #fff;
+        background-position:center 10% ;
+        background-size:128px 138px;
+        .exam_count{
+           
+            span{
+                display: inline-block;
+                width:31%;
+                text-align: center;
+                color: #000000;
+            }
+           
+        }
+        .btns{
+            width: 80%;
+            margin:0 auto;
+            height:25px;
+            margin-top:20px;
+            button{
+                height:25px;
+                width:104px;
+                border-radius: 20px;
+                border:0;
+            }
+            .cancel{
+                float: left;
+                background: #d2e8ff;
+                color:#68aeff;
+                
+            }
+            .confirm{
+                float: right;
+                background:#3298ff;
+                color:#fff;
+            }
+        }
+    }
+}
+
+.unAnswer{
+    .answer{
+        display: none;
+    }
+    .comments{
+        display: none;
     }
 }
