@@ -1,0 +1,195 @@
+  .container{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      .title{
+          text-align: center;
+          font-size: 12px;
+          color: #fff;
+          position: relative;
+          left: 0;
+          top: 0;
+           height:44px;
+           line-height: 44px;
+           width: 100%;
+           z-index:10000;
+           background: #3195fa;
+          .goback{
+              position: absolute;
+              width: 16px;
+              height: 16px;
+              background:url(img/goback.png) no-repeat 0 0;
+              background-size: 100%;
+              left: 20px;
+              top:12px;
+          }
+          .title_text{
+              color:#fff;
+              width: 100%;
+              left: 0;
+              position: absolute;
+              text-align: center;
+          }
+          .head{
+              width:28px;
+              height:28px;
+              float: right;
+              background: url(img/head_settlement.png) no-repeat center;
+              background-size: 100%;
+              margin-top:6px;
+              margin-right:20px;
+              position: relative;
+              .vip{
+                  position: absolute;
+                  width:13px;
+                  height:13px;
+                  border-radius:50%;
+                  background: url(img/VIP.png) no-repeat center #c7c8c8;
+                  background-size:9px 4px;
+                  left: 50%;
+                  margin-left:-6.5px;
+                  bottom:-6px;
+              }
+              .active{
+                background-color: #3298ff ;
+              } 
+            }  
+          i{
+              font-style: normal;
+          }
+      }
+      .content{
+          padding-bottom: 20px;
+          .maincard{
+              width:90%;
+              margin: 0 auto;
+              margin-top:20px;
+              border-radius: 6px;
+              box-shadow: 0px 4px 12px rgba(0, 21, 41, 0.15);
+              background: #fff; 
+              padding:10px;
+              .option{
+                  display: inline-block;
+                  width: 18px;
+                  height: 18px;
+                  background: url(img/vip_unselected.png) no-repeat center;
+                  background-size: 18px;
+                  position: relative;
+                  top: -10px;
+              }
+              .selected{
+                  background: url(img/vip_selected.png) no-repeat center;
+                  background-size: 18px;
+                  
+                  
+              }
+              ul{
+                  li:last-child{
+                      border: 0;
+                  }
+                  li{
+                      border-bottom: 1px solid #dedede;
+                      img{
+                          width:120px;
+                          margin-right: 5px;
+                      }
+                      >div{
+                          display: inline-block;
+                          max-width: 50%; 
+                          font-size: 12px;
+                          position: relative;
+                          top: 19px;
+
+                          p{
+                              line-height: 22px;
+
+                          }
+                          p:first-child{
+                              font-weight: 1000;
+                              font-size: 15px;
+                              color: #000;
+                          }
+                          p:last-child{
+                              font-size: 16px;
+                              font-weight: 1000;
+                              color:#3298ff ;
+                              margin-top:5px;
+                          }
+                      }
+                  }
+              }
+              
+          }
+          .description{
+              width: 80%;
+              margin:0 auto;
+              margin-top:20px;
+              .description_title{
+                  width: 100%;
+                  height: 35px;
+                  line-height: 35px;
+                  background: url(img/description_bg.png) no-repeat center;
+                  background-size:100% ;
+                  text-align: center;
+                  font-weight: 1000;
+                  font-size: 15px;
+                  color: #292929;
+                  margin-bottom: 15px;
+              }
+              ul{
+                  li{
+                      font-size: 12px;
+                      color: #292929;
+                      line-height: 19px;
+                      margin-bottom: 15px;
+                  }
+              }
+              
+          }
+          .purchaseBtn{
+              width: 85%;
+              height:50px;
+              margin: 0 auto;
+              background: url(img/purchaseBtn.png) no-repeat center;
+              background-size:100% ;
+              line-height: 40px;
+              text-align: center;
+              color: #fff;
+          }
+      }
+  }
+ @media screen and (max-width: 330px){
+     .content{
+          .maincard{
+              padding:5px;
+              .option{
+                  display: inline-block;
+                  width: 18px;
+                  height: 18px;
+                  background: url(img/vip_unselected.png) no-repeat center;
+                  background-size: 18px;
+                  position: relative;
+                  top: -10px;
+              }
+                  li{
+                       
+                      img{
+                          width:100px !important;
+                          margin-right: 5px;
+                      }
+                      >div{
+                          display: inline-block;
+                          max-width: 50%; 
+                          font-size: 12px;
+                          position: relative;
+                          top: 22px;
+
+                          p{
+                              line-height: 18px !important;
+
+                          }
+                      }
+                  }
+              }
+          }
+ }

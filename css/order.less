@@ -1,0 +1,170 @@
+  .container{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      .title{
+          text-align: center;
+          font-size: 12px;
+          color: #fff;
+          position: relative;
+          left: 0;
+          top: 0;
+           height:44px;
+           line-height: 44px;
+           width: 100%;
+           z-index:10000;
+           background: #3195fa;
+          .goback{
+              position: absolute;
+              width: 16px;
+              height: 16px;
+              background:url(img/goback.png) no-repeat 0 0;
+              background-size: 100%;
+              left: 20px;
+              top:12px;
+          }
+          .title_text{
+              color:#fff;
+              width: 100%;
+              left: 0;
+              position: absolute;
+              text-align: center;
+          }
+          .head{
+              width:28px;
+              height:28px;
+              float: right;
+              background: url(img/head_settlement.png) no-repeat center;
+              background-size: 100%;
+              margin-top:6px;
+              margin-right:20px;
+              position: relative;
+              .vip{
+                  position: absolute;
+                  width:13px;
+                  height:13px;
+                  border-radius:50%;
+                  background: url(img/VIP.png) no-repeat center #c7c8c8;
+                  background-size:9px 4px;
+                  left: 50%;
+                  margin-left:-6.5px;
+                  bottom:-6px;
+              }
+              .active{
+                background-color: #3298ff ;
+              } 
+            }  
+          i{
+              font-style: normal;
+          }
+      }
+      .content.payment{
+          .maincard{
+              height: 320px;
+              background: url(img/payment_bg.png) no-repeat center;
+              background-size:100%;
+              
+          }
+      }
+      .content{
+          width: 100%;
+          .maincard{
+
+              width:90%;
+              height: 265px;
+              margin: 0 auto;
+              background: url(img/order_bg.png) no-repeat center;
+              background-size:100%;
+              overflow: hidden;
+              position: relative;
+              margin-top:15px;
+               
+              img{
+                  display: block;
+                  margin: 0 auto;
+                  margin-top:40px;
+              }
+              >p{
+                  width: 100%;
+                  text-align: center;
+                  color: #292929;
+                  font-weight: 1000;
+                  margin-top:10px;
+              }
+              .orderinfo{
+                  position: absolute;
+                  width: 100%;
+                  text-align: center;
+                  bottom: 30px;
+                  color: #3e3e3e;
+                  p{
+                      width: 70%;
+                      margin: 0 auto;
+                      text-align: left;
+                  }
+              }
+          }
+          .payment_wx{
+              width: 90%;
+              border-radius: 20px;
+              text-align: center;
+              height:40px;
+              line-height: 40px;
+              background: #33cc66;
+              margin:20px auto 15px auto;
+              color: #fff;
+          }
+           .payment_ali{
+              width: 90%;
+              margin: 0 auto;
+              border-radius: 20px;
+              text-align: center;
+              height:40px;
+              line-height: 40px;
+              background: #0099ff;
+              color: #fff;
+          }
+          .my_order{
+              margin-top:30px;
+              width: 40%;
+              display: inline-block;
+              border-radius: 20px;
+              float: left;
+              margin-left: 25px;
+              height: 40px;
+              background: #0099ff;
+              color: #fff;
+              text-align: center;
+              line-height: 40px;
+          }
+          .backToindex{
+              margin-top:30px;
+              
+              width: 40%;
+              display: inline-block;
+              border-radius: 20px;
+              float: right;
+              margin-right: 25px;
+              height: 40px;
+
+              border: 1px solid #0099ff;
+              color: #0099ff;
+              text-align: center;
+              line-height: 40px;
+          }
+      }
+  }
+  @media screen and (max-width: 330px){
+       .content.payment{
+            .orderinfo{
+                  bottom: 40px !important;
+
+                  p{
+                      width: 70%;
+                      margin: 0 auto;
+                      text-align: left;
+                      font-size: 12px;
+                  }
+              }
+       }
+  }

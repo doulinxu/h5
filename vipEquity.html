@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>VIP权益页</title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/vipEquity.css"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">
+				<span class="goback"></span>
+				<span class="title_text">
+					聚培训作文
+				</span>
+				<div class="head">
+					<span class="vip active"></span>
+				</div>
+			</div>
+			<div class="content">
+				<div class="maincard">
+					<ul>
+						<li>
+							<span class="option selected" data-id='1' ></span>
+							<img src="css/img/vip_month.png" alt="" />
+							<div>
+								<p>VIP月卡</p>
+								<p>全站模拟考试试卷答案解析免费看+全站高质量作文任意看</p>
+								<p>98元</p>
+							</div>
+						</li>
+						<li>
+							<span class="option" data-id='2'></span>
+							<img src="css/img/vip_quarter.png" alt="" />
+							<div>
+								<p>VIP季卡</p>
+								<p>全站模拟考试试卷答案解析免费看+全站高质量作文任意看</p>
+								<p>168元</p>
+							</div>
+						</li>
+						<li>
+							<span class="option" data-id='3'></span>
+							<img src="css/img/vip_year.png" alt="" />
+							<div>
+								<p>VIP年卡</p>
+								<p>全站模拟考试试卷答案解析免费看+全站高质量作文任意看</p>
+								<p>980元</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="description">
+					<p class="description_title">
+						会员权益与服务说明
+					</p>
+					<ul>
+						<li>
+							1.会员权益  全站模拟试卷免费看+全站高质量作文任意看—+VIP一对一服务+不限次数不限科目提问，四大权益
+						</li>
+						<li>
+							2.发票领取  需要发票的用户，会员发票快递需要自付，有问题请联系客服，微信Llili，或者直接拨打电话：400-8000-3421
+						</li>
+						<li>
+							2.发票领取  需要发票的用户，会员发票快递需要自付，有问题请联系客服，微信Llili，或者直接拨打电话：400-8000-3421
+						</li>
+					</ul>
+				</div>
+				<div class="purchaseBtn">
+					立即购买
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		//切换选择
+		$('.maincard>ul>li').on('click',function(){
+			$('.selected').removeClass('selected');
+			$(this).find('.option').addClass('selected');
+		});
+		//页面跳转逻辑  根据实际地址和参数调整即可
+		$('.purchaseBtn').on('click',function(){
+			var _id = $('.option.selected').data('id');
+			window.open('https://abc?id='+_id);
+		});
+	</script>
+</html>

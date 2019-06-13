@@ -49,12 +49,12 @@
 		if($this.hasClass('selected')) {
 			$this.removeClass('selected');
 			$this.parents('.examination').find('.confirm_btn').removeClass('active');
-			$('.nav').find('li[data-number= '+ index +']').removeClass('answered');
+//			$('.nav').find('li[data-number= '+ index +']').removeClass('answered');
 		} else {
 			$this.parent().find('.selected').removeClass('selected');
 			$this.addClass('selected');
 			$this.parents('.examination').find('.confirm_btn').addClass('active');
-			$('.nav').find('li[data-number= '+ index +']').addClass('answered');
+//			$('.nav').find('li[data-number= '+ index +']').addClass('answered');
 		}
 	});
 	//多选
@@ -84,7 +84,23 @@
 			$(this).hide();
 		}
 	});
+	//交卷
 	$('.ahead').on('click',function(){
+		var unAnswer_count = 0;
+		var wrong_count = 0;
+		var score_count = 0;
+		$('.nav').find('.title-number li').each(function(){
+			if($(this).hasClass('error')){
+				wrong_count += 1;
+			}
+			if($(this).hasClass('noAnswer')){
+				unAnswer_count += 1;
+			}
+			//todo 计算得分
+		});
+		$('.submit_examination').find('.unAnswer_count span').html(unAnswer_count);
+		$('.submit_examination').find('.wrong_count span').html(wrong_count);
+		$('.submit_examination').find('.score_count span').html(score_count);
 		$('.submit_examination').show();
 	});
 	$('.submit_examination').find('.msk').on('click',function(){
@@ -101,22 +117,53 @@
 		if($this.hasClass('active')) {
 			//请求检测接口
 			//单选判断逻辑
-			var _result = true;
 			if($this.parents('.examination').hasClass('single')){
-				if($this.find('.active span').attr('answer') == 'right'){//答题正确
-					//判断对错的逻辑
-					if($this.find('span').attr('answer') == 'right'){//答题正确
-						$('.nav').find('li[data-number= '+ index +']').addClass('right');
-					}else{
-						$('.nav').find('li[data-number= '+ index +']').addClass('error');
+				//判断对错的逻辑
+				if($this.parents('.examination').find('.option.selected span').attr('answer') == 'right'){//答题正确
+					$('.nav').find('li[data-number= '+ index +']').removeClass('noAnswer').addClass('right');
+				}else{
+					$('.nav').find('li[data-number= '+ index +']').removeClass('noAnswer').addClass('error');
+					$this.parents('.examination').find('.option.selected').removeClass('selected').addClass('error');//错误选项显示
+					$this.parents('.examination').find('.option span').each(function(){
+						if($(this).attr('answer') == 'right'){
+							$(this).parent('.option').addClass('selected');
+						}
+					});
+				}
+			}
+			//多选题判断对错
+			if($this.parents('.examination').hasClass('muti')){
+				//判断对错的逻辑
+				var _result = true;
+				$this.parents('.examination').find('.option.selected span').each(function(){
+					if($(this).attr('answer') === 'right' && !$(this).parent().hasClass('selected')){ //漏选正确答案
+						_result = false;
+						return;
 					}
+					if($(this).attr('answer') === 'error' && $(this).parent().hasClass('selected')){ //错选错误答案
+						_result = false;
+						return;
+					}
+				})
+
+				if(_result){//答题正确
+					$('.nav').find('li[data-number= '+ index +']').removeClass('noAnswer').addClass('right');
+				}else{
+					$('.nav').find('li[data-number= '+ index +']').removeClass('noAnswer').addClass('error');
+					$this.parents('.examination').find('.option span').each(function(){
+						if($(this).attr('answer') == 'right'){
+							$(this).parent('.option').addClass('selected');
+						}else{
+							$(this).parent('.option').addClass('error');
+						}
+					});
 				}
 			}
 			$(this).parents('.swiper-slide').find('.option').unbind('click');
-			mySwiper.slideNext();
-			window.setTimeout(function(){
+//			mySwiper.slideNext();
+//			window.setTimeout(function(){
 				$this.parents('.unAnswer').removeClass('unAnswer');
-			},500);
+//			},500);
 		} else {
 			return;
 		}
